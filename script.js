@@ -3,12 +3,17 @@ const horasQ = document.getElementById('horas')
 const minsQ = document.getElementById('minutos')
 const secsQ = document.getElementById('segundos')
 
-const fechaQuery = "3 Dec 2023";
+const fechaQuery = "24 Dec 2023";
 
 formatoCero = (elemento) => {
 
     return elemento < 10 ? `0${elemento}` : elemento;
 
+}
+
+verFecha = (elemento) => {
+
+    return elemento <= 0 ? 0 : elemento;
 }
 
 countdown = () => {
@@ -24,10 +29,10 @@ countdown = () => {
     const mins = Math.floor(secsFaltantes / 60) % 60;
     const secs = Math.floor(secsFaltantes) % 60;
 
-    diasQ.innerHTML = dias;
-    horasQ.innerHTML = formatoCero(horas);
-    minsQ.innerHTML = formatoCero(mins);
-    secsQ.innerHTML = formatoCero(secs);
+    diasQ.innerHTML = verFecha(dias);
+    horasQ.innerHTML = formatoCero(verFecha(horas));
+    minsQ.innerHTML = formatoCero(verFecha(mins));
+    secsQ.innerHTML = formatoCero(verFecha(secs));
 }
 
 countdown();
