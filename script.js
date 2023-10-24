@@ -3,7 +3,7 @@ const horasQ = document.getElementById('horas')
 const minsQ = document.getElementById('minutos')
 const secsQ = document.getElementById('segundos')
 
-const fechaQuery = "24 Dec 2023";
+const fechaQuery = "3 Dec 2023";
 
 formatoCero = (elemento) => {
 
